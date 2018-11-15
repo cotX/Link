@@ -10,11 +10,14 @@ typedef int DataType;
 
 typedef struct SListNode
 {
-	struct SListNode *next;
+	struct SListNode *Next;
 	DataType data;
 }SListNode;
 
-
+void Print(SListNode* pList);
+SListNode* BuySListNode(DataType data);
+void SListInit(SListNode* pHead);
+void SListPushBack(SListNode* pHead, DataType data);
 
 
 #endif
