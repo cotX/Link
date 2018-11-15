@@ -40,3 +40,20 @@ void SListPushBack(SListNode* pHead, DataType data)
 		}
 	pCur->Next = pNewNode;	
 }
+/*βɾ*/
+void SListpopBack(SListNode* pHead)
+{
+	SListNode* pfast=pHead;
+	SListNode* psolw=pHead;
+	if (NULL == pfast->Next) { 
+		pfast = NULL; 
+		return;
+	}
+	pfast = pfast->Next;
+	while (pfast->Next)
+	{
+		pfast = pfast->Next;
+		psolw = psolw->Next;
+	}
+	psolw->Next = NULL;
+}

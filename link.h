@@ -18,6 +18,7 @@ void Print(SListNode* pList);
 SListNode* BuySListNode(DataType data);
 void SListInit(SListNode* pHead);
 void SListPushBack(SListNode* pHead, DataType data);
+void SListpopBack(SListNode* pHead);
 
 
 #endif
