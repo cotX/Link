@@ -57,3 +57,11 @@ void SListpopBack(SListNode* pHead)
 	}
 	psolw->Next = NULL;
 }
+/*Í·²å*/
+void SListPushFront(SListNode* pHead,DataType data)
+{
+	SListNode* pCur = pHead;
+	SListNode* pNewNode = BuySListNode(data);
+	pNewNode->Next=pCur->Next;
+}
+
