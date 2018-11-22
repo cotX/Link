@@ -216,6 +216,7 @@ void SListBubbleSort(SListNode* pHead)
 	SListNode* pCur = pHead->Next;
 	for (int i = 0; i < size - 1; ++i)
 	{
+		pCur = pHead->Next;
 		for (int j = 0; j < size-1-i; ++j,pCur=pCur->Next)
 		{
 			if (pCur->data>pCur->Next->data)
