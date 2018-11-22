@@ -14,12 +14,26 @@ typedef struct SListNode
 	DataType data;
 }SListNode;
 
-void Print(SListNode* pList);
+
 SListNode* BuySListNode(DataType data);
-void SListInit(SListNode* pHead);
+void Print(SListNode* pList);
+void SListInit(SListNode** pHead);
+
 void SListPushBack(SListNode* pHead, DataType data);
-void SListpopBack(SListNode* pHead);
+void SListPopBack(SListNode* pHead);
 void SListPushFront(SListNode* pHead, DataType data);
+void SListPopFront(SListNode* pHead);
+void SListInsert(SListNode* pHead, DataType data);
+void SListErase(SListNode* pHead, DataType data);
+void SListDestroy(SListNode* pHead);
+int SListSize(SListNode* pHead);
+int SListempty(SListNode* pHead);
+void SListRemove(SListNode* pHead, DataType data);
+void RemoveAll(SListNode* pHead,DataType data);
+DataType Front(SListNode* pHead);
+DataType Back(SListNode* pHead);
+
+SListNode* SListFind(SListNode* pHead, DataType data);
 
 
 #endif
