@@ -13,10 +13,11 @@ int main()
 	//SListErase(&pHead, 3);
 	//printf("%d\n",SListSize(&pHead));
 	//SListRemove(&pHead, 3);
-	RemoveAll(&pHead,3);
+	//RemoveAll(&pHead,3);
 	//printf("%d\n", Back(&pHead));
 	//SListDestroy(&pHead);
 	//SListFind(&pHead,6)->data);
+	SListBubbleSort(&pHead);
 	Print(pHead);
 
 

@@ -24,10 +24,10 @@ SListNode* BuySListNode(DataType data)
 void SListInit(SListNode** pHead)
 {
 	SListPushBack(pHead, 1);
-	SListPushBack(pHead, 2);
 	SListPushBack(pHead, 3);
-	SListPushBack(pHead, 4);
 	SListPushBack(pHead, 5);
+	SListPushBack(pHead, 2);
+	SListPushBack(pHead, 4);
 }
 /*Î²²å*/
 void SListPushBack(SListNode* pHead, DataType data)
@@ -213,14 +213,17 @@ void RemoveAll(SListNode* pHead,DataType data)
 void SListBubbleSort(SListNode* pHead)
 {
 	int size = SListSize(pHead);
-	SListNode* pCur = pHead;
-	for (int i = 0; i < size - 1; i++)
+	SListNode* pCur = pHead->Next;
+	for (int i = 0; i < size - 1; ++i)
 	{
-		for (int j = 0; j < size-1-i; j++)
+		for (int j = 0; j < size-1-i; ++j,pCur=pCur->Next)
 		{
-			if (pCur->Next->data>pCur->Next->Next->data)
+			if (pCur->data>pCur->Next->data)
 			{
-
+				DataType t;
+				t = pCur->Next->data;
+				pCur->Next->data = pCur->data;
+				pCur->data = t;
 			}
 		}
 	}

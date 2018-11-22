@@ -30,6 +30,7 @@ int SListSize(SListNode* pHead);
 int SListempty(SListNode* pHead);
 void SListRemove(SListNode* pHead, DataType data);
 void RemoveAll(SListNode* pHead,DataType data);
+void SListBubbleSort(SListNode* pHead);
 DataType Front(SListNode* pHead);
 DataType Back(SListNode* pHead);
 
